@@ -1,0 +1,14 @@
+﻿<Window x:Class="Outrun.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Outrun"
+        mc:Ignorable="d"
+        Title="Outrun" WindowStartupLocation="CenterScreen" WindowState="Maximized" ResizeMode="NoResize"
+        x:Name="MainWin">
+    <Canvas x:Name="myCanvas" Width="{Binding ElementName=MainWin, Path=ActualWidth}"
+      Height="{Binding ElementName=MainWin, Path=ActualHeight}" Background="Black">
+        <Image x:Name="car" Source="assets/car.png" Height="80"></Image>
+    </Canvas>
+</Window>
