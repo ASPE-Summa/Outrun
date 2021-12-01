@@ -6,9 +6,15 @@
         xmlns:local="clr-namespace:Outrun"
         mc:Ignorable="d"
         Title="Outrun" WindowStartupLocation="CenterScreen" WindowState="Maximized" ResizeMode="NoResize"
-        x:Name="MainWin">
-    <Canvas x:Name="myCanvas" Width="{Binding ElementName=MainWin, Path=ActualWidth}"
-      Height="{Binding ElementName=MainWin, Path=ActualHeight}" Background="Black">
-        <Image x:Name="car" Source="assets/car.png" Height="80"></Image>
-    </Canvas>
+        x:Name="MainWin" Height="1080" Width="1920">
+    <Grid>
+        <Canvas x:Name="myCanvas" Width="{Binding ElementName=MainWin, Path=ActualWidth}"
+      Height="{Binding ElementName=MainWin, Path=ActualHeight}">
+            <Canvas.Background>
+                <ImageBrush ImageSource="assets/background.jpg"/>
+            </Canvas.Background>
+            <TextBlock x:Name="secondTimer" Foreground="HotPink" FontSize="50">0</TextBlock>
+            <Image x:Name="car" Source="assets/car.png" Height="80"></Image>
+        </Canvas>
+    </Grid>
 </Window>
